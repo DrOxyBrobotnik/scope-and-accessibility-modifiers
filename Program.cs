@@ -5,6 +5,7 @@ namespace UnderstandingScope
     internal class Program
     {
         private static string k = "";
+
         static void Main(string[] args)
         {
             string j = "";
@@ -19,7 +20,7 @@ namespace UnderstandingScope
                 {
                     string l = i.ToString();
                 }
-                //Console.WriteLine(l);
+                //Console.WriteLine();
 
             }
             //Console.WriteLine(i);
@@ -28,12 +29,28 @@ namespace UnderstandingScope
 
             HelperMethod();
 
+            Car myCar = new Car();
+            myCar.DoSomething();
+
             Console.ReadLine();
         }
 
         static void HelperMethod()
         {
             Console.WriteLine("Value of k from the HelperMethod(): " + k);
+        }
+    }
+
+    class Car
+    {
+        public void DoSomething()
+        {
+            Console.WriteLine(helperMethod());
+        }
+
+        private string helperMethod()
+        {
+            return "Hello world!";
         }
     }
 }
